@@ -1,0 +1,29 @@
+---
+import { tn, localizedPath, type Lang } from '@/i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const home = localizedPath(lang);
+const wa = 'https://wa.me/34946194022';
+---
+
+<header class="sticky top-0 z-50 border-b border-paper-2 bg-paper/85 backdrop-blur">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+    <a href={home} class="font-serif text-2xl tracking-wide text-pine">Arimune</a>
+
+    <ul class="hidden items-center gap-8 text-sm text-mist md:flex">
+      <li><a class="transition-colors hover:text-pine" href={`${home}#habitaciones`}>{tn(lang, 'Habitaciones')}</a></li>
+      <li><a class="transition-colors hover:text-pine" href={`${home}#contacto`}>{tn(lang, 'Contacto')}</a></li>
+    </ul>
+
+    <a
+      href={wa}
+      class="rounded-full bg-pine px-5 py-2 text-sm text-paper transition-opacity hover:opacity-90"
+    >
+      {tn(lang, 'Reservar')}
+    </a>
+  </nav>
+</header>

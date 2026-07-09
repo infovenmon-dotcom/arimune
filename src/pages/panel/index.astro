@@ -1,0 +1,135 @@
+---
+// Panel de gestión (SPA v3): diseño visual unificado servido con datos REALES.
+// - Habitaciones: leídas de rooms.json; el toggle activa/bloquea vía /api/rooms.
+// - Reservas: del store real; "Nueva reserva" persiste vía /api/panel/booking.
+// - Facturas/gastos: datos de ejemplo (panel-sample.json) hasta conectar el motor.
+// El CSS/JS/markup del diseño viven como assets crudos para no chocar con el
+// parser de Astro (las llaves de CSS/JS se interpretarían como expresiones).
+import { getAllRooms } from '@/lib/rooms';
+import { listBookings, getIcalUrls } from '@/lib/bookings';
+import { listExpenses } from '@/lib/expenses';
+import { webPrice } from '@/lib/pricing';
+import reviewsSample from '@/data/reviews-sample.json';
+import css from '@/lib/panel.css?raw';
+import markup from '@/lib/panel-markup.html?raw';
+import appJs from '@/lib/panel-app.js?raw';
+
+export const prerender = false;
+
+// Nunca cachear el panel: que el navegador (móvil) cargue siempre la última
+// versión del código y el estado real de las habitaciones.
+Astro.response.headers.set('cache-control', 'no-store');
+
+const roomsData = await getAllRooms();
+const priceByName = Object.fromEntries(roomsData.map((r) => [r.nombre, r.precio])); // tarifa plataformas
+const webByName = Object.fromEntries(roomsData.map((r) => [r.nombre, webPrice(r.precio)])); // cobro web (−10%)
+
+const rooms = roomsData.map((r) => ({
+  id: r.nombre, // nombre visible y clave de colores/reservas
+  rid: r.id, // id real para la API (/api/rooms/:id)
+  cap: r.capacidad,
+  rate: r.precio,
+  floor: r.planta === 'superior' ? 'sup' : 'baja',
+  kind: r.tipo,
+  m2: r.m2,
+  active: r.activa,
+  mean: r.significado,
+  story: r.storytelling,
+  thumb: (r.fotos && r.fotos[0]) || '',
+}));
+
+const bookings = (await listBookings()).map((b) => ({
+  room: b.room,
+  name: b.name || 'Reserva',
+  email: b.email || '',
+  phone: b.phone || '',
+  nif: b.nif || '',
+  lang: b.lang || '',
+  consent: !!b.consent,
+  in: b.in,
+  out: b.out,
+  guests: b.pax || 2,
+  ch: b.ref || 'Directa',
+  mp: false,
+  rate: webByName[b.room] || 0, // ingresos web = tarifa − 10%
+}));
+
+const today = new Date().toISOString().slice(0, 10);
+
+// Fuente única: TODA reserva (web o panel) alimenta facturas e ingresos.
+const nightsOf = (a: string, b: string) => Math.round((Date.parse(b) - Date.parse(a)) / 86400000);
+const r2 = (n: number) => Math.round(n * 100) / 100;
+const MES3 = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+
+// Facturas derivadas de las reservas (IVA 10% incluido en la tarifa).
+const invoices = [...bookings]
+  .sort((a, b) => a.in.localeCompare(b.in))
+  .map((b, idx) => {
+    const n = nightsOf(b.in, b.out);
+    const total = (b.rate || 0) * n;
+    const base = r2(total / 1.1);
+    return {
+      n: '2026/' + String(41 + idx).padStart(3, '0'),
+      date: b.in,
+      client: b.name,
+      nif: b.nif || '',
+      base,
+      iva: r2(total - base),
+      status: b.out < today ? 'Cobrada' : 'Pendiente',
+      ch: b.ch,
+      concept: `Estancia ${n} noche${n > 1 ? 's' : ''} · hab. ${b.room}`,
+    };
+  });
+
+// Ingresos por mes calculados a partir de las reservas reales.
+const monthRev: Record<string, number> = Object.fromEntries(MES3.map((m) => [m, 0]));
+for (const b of bookings) {
+  monthRev[MES3[Number(b.in.slice(5, 7)) - 1]] += (b.rate || 0) * nightsOf(b.in, b.out);
+}
+
+// Gastos reales (con IVA soportado) desde el store.
+const expenses = (await listExpenses()).map((e) => ({
+  date: e.date,
+  desc: e.desc,
+  cat: e.cat,
+  amt: e.total,
+  iva: e.iva,
+  deducible: e.deducible,
+}));
+
+const ical = await getIcalUrls();
+
+const PANEL = {
+  rooms,
+  bookings,
+  invoices,
+  expenses,
+  monthRev,
+  today,
+  ical,
+  reviews: reviewsSample.reviews,
+};
+
+const panelJson = JSON.stringify(PANEL).replace(/</g, '\\u003c');
+const inlineJs = `const PANEL=${panelJson};\n${appJs}`;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arimune · Panel de gestión</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style is:global set:html={css}></style>
+  </head>
+  <body>
+    <Fragment set:html={markup} />
+    <script is:inline set:html={inlineJs}></script>
+  </body>
+</html>

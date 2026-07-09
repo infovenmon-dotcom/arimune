@@ -1,0 +1,43 @@
+---
+// La maqueta cambia de idioma en cliente: servimos la MISMA home para cualquier
+// locale válido (/eu, /fr…) con la misma inyección de disponibilidad. ES = raíz.
+export const prerender = false;
+import html from '../../home.html?raw';
+import { languages, defaultLang } from '@/i18n/ui';
+import { getActiveRooms } from '@/lib/rooms';
+import { getBookedMap } from '@/lib/bookings';
+import { webPrice } from '@/lib/pricing';
+
+const param = Astro.params.lang;
+if (!param || !(param in languages) || param === defaultLang) {
+  return new Response('Not found', { status: 404 });
+}
+
+let injected = '';
+try {
+  const activeRooms = await getActiveRooms();
+  const activeNames = activeRooms.map((r) => r.nombre);
+  const rooms = activeRooms.map((r) => ({
+    id: r.nombre, concept: r.concepto, price: webPrice(r.precio), ota: r.precio, cap: r.capacidad,
+    m2: r.m2, bed: r.cama, kind: r.tipo, story: r.storytelling, img: (r.fotos && r.fotos[0]) || '',
+  }));
+  let booked: Record<string, [string, string][]> = {};
+  try {
+    booked = await getBookedMap();
+  } catch {
+    booked = {};
+  }
+  const stripe = !!process.env.STRIPE_SECRET_KEY;
+  const demo = !stripe; // sin Stripe: modo demostración (simula reserva+factura)
+  const json = JSON.stringify({ activeNames, rooms, booked, stripe, demo }).replace(/</g, '\\u003c');
+  injected = `<script>window.ARIMUNE_AVAIL=${json}</script>`;
+} catch (e) {
+  const msg = (e instanceof Error ? e.message : String(e)).replace(/--+>/g, '');
+  injected = `<!-- ARIMUNE_AVAIL inject error: ${msg} -->`;
+}
+const out = html.replace('<!--ARIMUNE_AVAIL-->', injected);
+
+return new Response(out, {
+  headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' },
+});
+---
