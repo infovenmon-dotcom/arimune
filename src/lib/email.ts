@@ -1,9 +1,9 @@
 /**
  * Envío de email transaccional. Usa Brevo si BREVO_API_KEY está configurada;
  * si no, no envía (modo demo) y no rompe el flujo de reserva.
- * Remitente configurable con EMAIL_FROM (por defecto info@arimune.es).
+ * Remitente configurable con EMAIL_FROM (por defecto hotel@arimune.es).
  */
-const FROM_EMAIL = process.env.EMAIL_FROM || 'info@arimune.es';
+const FROM_EMAIL = process.env.EMAIL_FROM || 'hotel@arimune.es';
 const FROM_NAME = process.env.EMAIL_FROM_NAME || 'Arimune';
 
 export async function sendEmail(opts: { to: string; name?: string; subject: string; html: string }): Promise<{ ok: boolean; skipped?: boolean }> {
@@ -28,12 +28,12 @@ export async function sendEmail(opts: { to: string; name?: string; subject: stri
 
 // Textos por idioma (fallback a ES). EU = euskera.
 const T: Record<string, Record<string, string>> = {
-  es: { sub: 'Confirmación de tu reserva · Arimune', hi: 'Hola', thanks: '¡Gracias por reservar en Arimune!', your: 'Tu reserva', room: 'Habitación', cin: 'Entrada', cout: 'Salida', nights: 'Noches', total: 'Total', foot: 'Te esperamos en Urdaibai. Cualquier duda, responde a este email.', bye: 'Un saludo,' },
-  en: { sub: 'Your booking confirmation · Arimune', hi: 'Hi', thanks: 'Thanks for booking at Arimune!', your: 'Your booking', room: 'Room', cin: 'Check-in', cout: 'Check-out', nights: 'Nights', total: 'Total', foot: 'We look forward to seeing you in Urdaibai. Any questions, just reply to this email.', bye: 'Best,' },
-  fr: { sub: 'Confirmation de votre réservation · Arimune', hi: 'Bonjour', thanks: 'Merci d’avoir réservé chez Arimune !', your: 'Votre réservation', room: 'Chambre', cin: 'Arrivée', cout: 'Départ', nights: 'Nuits', total: 'Total', foot: 'À bientôt à Urdaibai. Pour toute question, répondez à cet email.', bye: 'Cordialement,' },
-  de: { sub: 'Bestätigung deiner Buchung · Arimune', hi: 'Hallo', thanks: 'Danke für deine Buchung bei Arimune!', your: 'Deine Buchung', room: 'Zimmer', cin: 'Anreise', cout: 'Abreise', nights: 'Nächte', total: 'Gesamt', foot: 'Wir freuen uns auf dich in Urdaibai. Bei Fragen einfach auf diese E-Mail antworten.', bye: 'Herzliche Grüße,' },
-  it: { sub: 'Conferma della tua prenotazione · Arimune', hi: 'Ciao', thanks: 'Grazie per aver prenotato a Arimune!', your: 'La tua prenotazione', room: 'Camera', cin: 'Check-in', cout: 'Check-out', nights: 'Notti', total: 'Totale', foot: 'Ti aspettiamo a Urdaibai. Per qualsiasi domanda, rispondi a questa email.', bye: 'Un saluto,' },
-  eu: { sub: 'Zure erreserbaren baieztapena · Arimune', hi: 'Kaixo', thanks: 'Eskerrik asko Arimunen erreserbatzeagatik!', your: 'Zure erreserba', room: 'Gela', cin: 'Sarrera', cout: 'Irteera', nights: 'Gauak', total: 'Guztira', foot: 'Urdaibain zain zaitugu. Zalantzarik baduzu, erantzun email honi.', bye: 'Agur bero bat,' },
+  es: { sub: 'Confirmación de tu reserva · Arimune', hi: 'Hola', thanks: '¡Gracias por reservar en Arimune!', your: 'Tu reserva', room: 'Habitación', cin: 'Entrada', cout: 'Salida', nights: 'Noches', total: 'Total', foot: 'Te esperamos en Bakio. Cualquier duda, responde a este email.', bye: 'Un saludo,' },
+  en: { sub: 'Your booking confirmation · Arimune', hi: 'Hi', thanks: 'Thanks for booking at Arimune!', your: 'Your booking', room: 'Room', cin: 'Check-in', cout: 'Check-out', nights: 'Nights', total: 'Total', foot: 'We look forward to seeing you in Bakio. Any questions, just reply to this email.', bye: 'Best,' },
+  fr: { sub: 'Confirmation de votre réservation · Arimune', hi: 'Bonjour', thanks: 'Merci d’avoir réservé chez Arimune !', your: 'Votre réservation', room: 'Chambre', cin: 'Arrivée', cout: 'Départ', nights: 'Nuits', total: 'Total', foot: 'À bientôt à Bakio. Pour toute question, répondez à cet email.', bye: 'Cordialement,' },
+  de: { sub: 'Bestätigung deiner Buchung · Arimune', hi: 'Hallo', thanks: 'Danke für deine Buchung bei Arimune!', your: 'Deine Buchung', room: 'Zimmer', cin: 'Anreise', cout: 'Abreise', nights: 'Nächte', total: 'Gesamt', foot: 'Wir freuen uns auf dich in Bakio. Bei Fragen einfach auf diese E-Mail antworten.', bye: 'Herzliche Grüße,' },
+  it: { sub: 'Conferma della tua prenotazione · Arimune', hi: 'Ciao', thanks: 'Grazie per aver prenotato a Arimune!', your: 'La tua prenotazione', room: 'Camera', cin: 'Check-in', cout: 'Check-out', nights: 'Notti', total: 'Totale', foot: 'Ti aspettiamo a Bakio. Per qualsiasi domanda, rispondi a questa email.', bye: 'Un saluto,' },
+  eu: { sub: 'Zure erreserbaren baieztapena · Arimune', hi: 'Kaixo', thanks: 'Eskerrik asko Arimunen erreserbatzeagatik!', your: 'Zure erreserba', room: 'Gela', cin: 'Sarrera', cout: 'Irteera', nights: 'Gauak', total: 'Guztira', foot: 'Bakion zain zaitugu. Zalantzarik baduzu, erantzun email honi.', bye: 'Agur bero bat,' },
 };
 
 export function bookingEmail(
@@ -48,7 +48,7 @@ export function bookingEmail(
   const html = `<div style="font-family:system-ui,Arial,sans-serif;max-width:520px;margin:auto;color:#1E211B">
     <div style="background:#2B3A2E;color:#F4F5F0;padding:22px;border-radius:14px 14px 0 0">
       <div style="font-family:Georgia,serif;font-size:24px">arimune</div>
-      <div style="font-size:12px;color:#BFC7B4;letter-spacing:.1em;text-transform:uppercase">Urdaibai · Bakio</div>
+      <div style="font-size:12px;color:#BFC7B4;letter-spacing:.1em;text-transform:uppercase">Bakio · Bizkaia</div>
     </div>
     <div style="border:1px solid #E2E5DA;border-top:0;border-radius:0 0 14px 14px;padding:22px">
       <p>${t.hi} ${b.name || ''},</p>

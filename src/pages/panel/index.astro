@@ -20,7 +20,11 @@ export const prerender = false;
 // versión del código y el estado real de las habitaciones.
 Astro.response.headers.set('cache-control', 'no-store');
 
-const roomsData = await getAllRooms();
+const roomsData0 = await getAllRooms();
+// Arimune no publica tarifas: para que el panel de demostración tenga números, tarifas de EJEMPLO por categoría
+// (solo panel; la web pública no enseña precios). El hotel pone las suyas en «Precio normal».
+const DEMO_RATE = (t: string) => /^suite/.test(t) ? 180 : /^junior/.test(t) ? 150 : /terraza/.test(t) ? 120 : /superior/.test(t) && !/individual/.test(t) ? 115 : /individual/.test(t) ? 80 : /vistas mar/.test(t) ? 110 : 95;
+const roomsData = roomsData0.map((r) => ({ ...r, precio: r.precio || DEMO_RATE(String(r.tipo)) }));
 const priceByName = Object.fromEntries(roomsData.map((r) => [r.nombre, r.precio])); // tarifa plataformas
 const webByName = Object.fromEntries(roomsData.map((r) => [r.nombre, webPrice(r.precio)])); // cobro web (−10%)
 

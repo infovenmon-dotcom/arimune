@@ -1,279 +1,1119 @@
 {
-  "_meta": {
-    "nota": "Reservas + bloqueos externos (Booking iCal). Fuente única de disponibilidad."
+ "_meta": {
+  "nota": "Reservas de EJEMPLO para la demostración del panel (16/11/2026 – 31/12/2026)."
+ },
+ "bookings": [
+  {
+   "id": "seed0",
+   "room": "Hondartza",
+   "in": "2026-11-19",
+   "out": "2026-11-21",
+   "name": "Ane U.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
   },
-  "bookings": [
-    {
-      "id": "seed1",
-      "room": "Argia",
-      "in": "2026-06-20",
-      "out": "2026-06-25",
-      "name": "Marie & Paul L.",
-      "pax": 2,
-      "source": "web",
-      "ref": "Directa"
-    },
-    {
-      "id": "seed2",
-      "room": "Basoa",
-      "in": "2026-06-22",
-      "out": "2026-06-26",
-      "name": "Anke V.",
-      "pax": 2,
-      "source": "channel",
-      "ref": "Booking"
-    },
-    {
-      "id": "seed3",
-      "room": "Itsaso",
-      "in": "2026-06-23",
-      "out": "2026-06-28",
-      "name": "Familia Etxeberria",
-      "pax": 2,
-      "source": "web",
-      "ref": "Directa"
-    },
-    {
-      "id": "seed4",
-      "room": "Lorategia",
-      "in": "2026-06-24",
-      "out": "2026-06-30",
-      "name": "Jensen (4 pax)",
-      "pax": 4,
-      "source": "channel",
-      "ref": "Expedia/Vrbo"
-    },
-    {
-      "id": "seed5",
-      "room": "Lasai",
-      "in": "2026-06-27",
-      "out": "2026-06-29",
-      "name": "Cristina R.",
-      "pax": 2,
-      "source": "channel",
-      "ref": "Teléfono/WhatsApp"
-    },
-    {
-      "id": "seed6",
-      "room": "Argia",
-      "in": "2026-06-28",
-      "out": "2026-07-02",
-      "name": "Hans & Greta",
-      "pax": 2,
-      "source": "web",
-      "ref": "Directa"
-    },
-    {
-      "id": "seed7",
-      "room": "Itsaso",
-      "in": "2026-07-03",
-      "out": "2026-07-07",
-      "name": "Familia Agirre",
-      "pax": 3,
-      "source": "web",
-      "ref": "Directa"
-    },
-    {
-      "id": "seed8",
-      "room": "Argia",
-      "in": "2026-07-08",
-      "out": "2026-07-11",
-      "name": "Laura & Tom",
-      "pax": 2,
-      "source": "web",
-      "ref": "Directa"
-    },
-    {
-      "id": "seed9",
-      "room": "Basoa",
-      "in": "2026-07-10",
-      "out": "2026-07-14",
-      "name": "S. Müller",
-      "pax": 2,
-      "source": "channel",
-      "ref": "Booking"
-    },
-    {
-      "id": "seed10",
-      "room": "Izar",
-      "in": "2026-07-12",
-      "out": "2026-07-15",
-      "name": "J. Dubois",
-      "pax": 2,
-      "source": "channel",
-      "ref": "Booking"
-    },
-    {
-      "id": "seed11",
-      "room": "Itsaso",
-      "in": "2026-07-18",
-      "out": "2026-07-22",
-      "name": "H. Becker",
-      "pax": 2,
-      "source": "channel",
-      "ref": "Booking"
-    },
-    {
-      "id": "seed12",
-      "room": "Lorategia",
-      "in": "2026-07-18",
-      "out": "2026-07-24",
-      "name": "The Walkers (4 pax)",
-      "pax": 4,
-      "source": "channel",
-      "ref": "Expedia/Vrbo"
-    },
-    {
-      "id": "seed13",
-      "room": "Lasai",
-      "in": "2026-07-20",
-      "out": "2026-07-23",
-      "name": "Marta S.",
-      "pax": 2,
-      "source": "channel",
-      "ref": "Teléfono/WhatsApp"
-    },
-    {
-      "id": "seed14",
-      "room": "Argia",
-      "in": "2026-07-20",
-      "out": "2026-07-24",
-      "name": "Nora & Beñat",
-      "pax": 2,
-      "source": "web",
-      "ref": "Directa"
-    },
-    {
-      "id": "seed15",
-      "room": "Argia",
-      "in": "2026-08-01",
-      "out": "2026-08-06",
-      "name": "F. Rossi",
-      "pax": 2,
-      "source": "channel",
-      "ref": "Booking"
-    },
-    {
-      "id": "seed16",
-      "room": "Lasai",
-      "in": "2026-08-05",
-      "out": "2026-08-09",
-      "name": "R. O'Brien",
-      "pax": 2,
-      "source": "channel",
-      "ref": "Booking"
-    },
-    {
-      "id": "seed17",
-      "room": "Basoa",
-      "in": "2026-08-08",
-      "out": "2026-08-12",
-      "name": "L. Janssen",
-      "pax": 2,
-      "source": "channel",
-      "ref": "Booking"
-    },
-    {
-      "id": "seed18",
-      "room": "Itsaso",
-      "in": "2026-08-10",
-      "out": "2026-08-15",
-      "name": "Familia Etxeberria",
-      "pax": 3,
-      "source": "web",
-      "ref": "Directa"
-    },
-    {
-      "id": "seed19",
-      "room": "Izar",
-      "in": "2026-08-12",
-      "out": "2026-08-16",
-      "name": "P. Schmidt",
-      "pax": 2,
-      "source": "channel",
-      "ref": "Expedia/Vrbo"
-    },
-    {
-      "id": "seed20",
-      "room": "Lorategia",
-      "in": "2026-08-15",
-      "out": "2026-08-22",
-      "name": "The Browns (4 pax)",
-      "pax": 4,
-      "source": "channel",
-      "ref": "Booking"
-    },
-    {
-      "id": "seed21",
-      "room": "Basoa",
-      "in": "2026-08-20",
-      "out": "2026-08-24",
-      "name": "Iker & Maite",
-      "pax": 2,
-      "source": "web",
-      "ref": "Directa"
-    },
-    {
-      "id": "seed22",
-      "room": "Lasai",
-      "in": "2026-08-23",
-      "out": "2026-08-27",
-      "name": "K. Andersen",
-      "pax": 2,
-      "source": "web",
-      "ref": "Directa"
-    },
-    {
-      "id": "seed23",
-      "room": "Basoa",
-      "in": "2026-09-01",
-      "out": "2026-09-04",
-      "name": "Claire D.",
-      "pax": 2,
-      "source": "web",
-      "ref": "Directa"
-    },
-    {
-      "id": "seed24",
-      "room": "Argia",
-      "in": "2026-09-05",
-      "out": "2026-09-09",
-      "name": "Sophie & Marc",
-      "pax": 2,
-      "source": "web",
-      "ref": "Directa"
-    },
-    {
-      "id": "seed25",
-      "room": "Itsaso",
-      "in": "2026-09-10",
-      "out": "2026-09-14",
-      "name": "De Vries",
-      "pax": 2,
-      "source": "channel",
-      "ref": "Booking"
-    },
-    {
-      "id": "seed26",
-      "room": "Izar",
-      "in": "2026-09-12",
-      "out": "2026-09-15",
-      "name": "Unai & Leire",
-      "pax": 2,
-      "source": "web",
-      "ref": "Directa"
-    },
-    {
-      "id": "seed27",
-      "room": "Lorategia",
-      "in": "2026-09-18",
-      "out": "2026-09-22",
-      "name": "Familia Ruiz (4 pax)",
-      "pax": 4,
-      "source": "web",
-      "ref": "Directa"
-    }
-  ],
-  "external": {},
-  "icalUrls": {}
+  {
+   "id": "seed1",
+   "room": "Hondartza",
+   "in": "2026-11-22",
+   "out": "2026-11-23",
+   "name": "Anke V.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed2",
+   "room": "Hondartza",
+   "in": "2026-11-26",
+   "out": "2026-11-27",
+   "name": "Cristina R.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed3",
+   "room": "Hondartza",
+   "in": "2026-11-28",
+   "out": "2026-11-29",
+   "name": "Laura P.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed4",
+   "room": "Hondartza",
+   "in": "2026-11-30",
+   "out": "2026-12-02",
+   "name": "Sophie D.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed5",
+   "room": "Hondartza",
+   "in": "2026-12-06",
+   "out": "2026-12-07",
+   "name": "Anke V.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed6",
+   "room": "Hondartza",
+   "in": "2026-12-09",
+   "out": "2026-12-10",
+   "name": "Mikel Z.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed7",
+   "room": "Hondartza",
+   "in": "2026-12-14",
+   "out": "2026-12-15",
+   "name": "Marie & Paul L.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed8",
+   "room": "Hondartza",
+   "in": "2026-12-20",
+   "out": "2026-12-22",
+   "name": "Laura P.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed9",
+   "room": "Hondartza",
+   "in": "2026-12-24",
+   "out": "2026-12-25",
+   "name": "Familia García",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed10",
+   "room": "Koba",
+   "in": "2026-11-17",
+   "out": "2026-11-19",
+   "name": "Anke V.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed11",
+   "room": "Koba",
+   "in": "2026-11-24",
+   "out": "2026-11-25",
+   "name": "Marie & Paul L.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed12",
+   "room": "Koba",
+   "in": "2026-11-30",
+   "out": "2026-12-02",
+   "name": "Ane U.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed13",
+   "room": "Koba",
+   "in": "2026-12-07",
+   "out": "2026-12-11",
+   "name": "Iñaki A.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed14",
+   "room": "Koba",
+   "in": "2026-12-16",
+   "out": "2026-12-20",
+   "name": "Familia García",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed15",
+   "room": "Koba",
+   "in": "2026-12-22",
+   "out": "2026-12-24",
+   "name": "Elena S.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Teléfono"
+  },
+  {
+   "id": "seed16",
+   "room": "Koba",
+   "in": "2026-12-26",
+   "out": "2026-12-27",
+   "name": "Familia García",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed17",
+   "room": "Ama Arantza",
+   "in": "2026-11-21",
+   "out": "2026-11-25",
+   "name": "Tom B.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed18",
+   "room": "Ama Arantza",
+   "in": "2026-11-29",
+   "out": "2026-12-02",
+   "name": "Anke V.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed19",
+   "room": "Ama Arantza",
+   "in": "2026-12-03",
+   "out": "2026-12-07",
+   "name": "Elena S.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed20",
+   "room": "Ama Arantza",
+   "in": "2026-12-10",
+   "out": "2026-12-12",
+   "name": "Laura P.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed21",
+   "room": "Ama Arantza",
+   "in": "2026-12-13",
+   "out": "2026-12-14",
+   "name": "Mikel Z.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed22",
+   "room": "Ama Arantza",
+   "in": "2026-12-21",
+   "out": "2026-12-24",
+   "name": "Tom B.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed23",
+   "room": "Ama Arantza",
+   "in": "2026-12-27",
+   "out": "2026-12-31",
+   "name": "Elena S.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed24",
+   "room": "Aitxitxe Peli",
+   "in": "2026-11-20",
+   "out": "2026-11-21",
+   "name": "Familia García",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed25",
+   "room": "Aitxitxe Peli",
+   "in": "2026-11-25",
+   "out": "2026-11-26",
+   "name": "Tom B.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed26",
+   "room": "Aitxitxe Peli",
+   "in": "2026-12-02",
+   "out": "2026-12-05",
+   "name": "Mikel Z.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Teléfono"
+  },
+  {
+   "id": "seed27",
+   "room": "Aitxitxe Peli",
+   "in": "2026-12-11",
+   "out": "2026-12-15",
+   "name": "Tom B.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed28",
+   "room": "Aitxitxe Peli",
+   "in": "2026-12-19",
+   "out": "2026-12-22",
+   "name": "Iñaki A.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed29",
+   "room": "Aitxitxe Peli",
+   "in": "2026-12-25",
+   "out": "2026-12-27",
+   "name": "Anke V.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed30",
+   "room": "Amama Kontxita",
+   "in": "2026-11-20",
+   "out": "2026-11-21",
+   "name": "Elena S.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed31",
+   "room": "Amama Kontxita",
+   "in": "2026-11-24",
+   "out": "2026-11-26",
+   "name": "Cristina R.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Teléfono"
+  },
+  {
+   "id": "seed32",
+   "room": "Amama Kontxita",
+   "in": "2026-11-30",
+   "out": "2026-12-04",
+   "name": "Anke V.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed33",
+   "room": "Amama Kontxita",
+   "in": "2026-12-06",
+   "out": "2026-12-10",
+   "name": "Sophie D.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed34",
+   "room": "Amama Kontxita",
+   "in": "2026-12-13",
+   "out": "2026-12-15",
+   "name": "Luca R.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed35",
+   "room": "Amama Kontxita",
+   "in": "2026-12-20",
+   "out": "2026-12-23",
+   "name": "Laura P.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Teléfono"
+  },
+  {
+   "id": "seed36",
+   "room": "Amama Kontxita",
+   "in": "2026-12-26",
+   "out": "2026-12-30",
+   "name": "Jon E.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed37",
+   "room": "Atxulo",
+   "in": "2026-11-17",
+   "out": "2026-11-19",
+   "name": "Cristina R.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed38",
+   "room": "Atxulo",
+   "in": "2026-11-25",
+   "out": "2026-11-27",
+   "name": "Iñaki A.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed39",
+   "room": "Atxulo",
+   "in": "2026-12-04",
+   "out": "2026-12-06",
+   "name": "Familia García",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed40",
+   "room": "Atxulo",
+   "in": "2026-12-07",
+   "out": "2026-12-09",
+   "name": "Sophie D.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed41",
+   "room": "Atxulo",
+   "in": "2026-12-12",
+   "out": "2026-12-15",
+   "name": "Tom B.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed42",
+   "room": "Atxulo",
+   "in": "2026-12-22",
+   "out": "2026-12-23",
+   "name": "Luca R.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed43",
+   "room": "Burgoa",
+   "in": "2026-11-20",
+   "out": "2026-11-24",
+   "name": "Anke V.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed44",
+   "room": "Burgoa",
+   "in": "2026-11-28",
+   "out": "2026-12-02",
+   "name": "Cristina R.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed45",
+   "room": "Burgoa",
+   "in": "2026-12-03",
+   "out": "2026-12-05",
+   "name": "Jon E.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed46",
+   "room": "Burgoa",
+   "in": "2026-12-06",
+   "out": "2026-12-09",
+   "name": "Marie & Paul L.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed47",
+   "room": "Burgoa",
+   "in": "2026-12-10",
+   "out": "2026-12-11",
+   "name": "Jon E.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed48",
+   "room": "Burgoa",
+   "in": "2026-12-16",
+   "out": "2026-12-17",
+   "name": "Mikel Z.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed49",
+   "room": "Burgoa",
+   "in": "2026-12-18",
+   "out": "2026-12-19",
+   "name": "Mikel Z.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed50",
+   "room": "Burgoa",
+   "in": "2026-12-23",
+   "out": "2026-12-25",
+   "name": "Familia García",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Teléfono"
+  },
+  {
+   "id": "seed51",
+   "room": "Burgoa",
+   "in": "2026-12-28",
+   "out": "2026-12-31",
+   "name": "Anke V.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed52",
+   "room": "Jata",
+   "in": "2026-11-17",
+   "out": "2026-11-21",
+   "name": "Iñaki A.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed53",
+   "room": "Jata",
+   "in": "2026-11-25",
+   "out": "2026-11-28",
+   "name": "Jon E.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed54",
+   "room": "Jata",
+   "in": "2026-11-29",
+   "out": "2026-12-02",
+   "name": "Familia García",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Teléfono"
+  },
+  {
+   "id": "seed55",
+   "room": "Jata",
+   "in": "2026-12-06",
+   "out": "2026-12-08",
+   "name": "Marie & Paul L.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed56",
+   "room": "Jata",
+   "in": "2026-12-10",
+   "out": "2026-12-13",
+   "name": "Tom B.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed57",
+   "room": "Jata",
+   "in": "2026-12-18",
+   "out": "2026-12-19",
+   "name": "Familia García",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed58",
+   "room": "Jata",
+   "in": "2026-12-25",
+   "out": "2026-12-26",
+   "name": "Luca R.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Teléfono"
+  },
+  {
+   "id": "seed59",
+   "room": "Bekoerrota",
+   "in": "2026-11-19",
+   "out": "2026-11-22",
+   "name": "Hans M.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed60",
+   "room": "Bekoerrota",
+   "in": "2026-11-29",
+   "out": "2026-12-01",
+   "name": "Sophie D.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed61",
+   "room": "Bekoerrota",
+   "in": "2026-12-08",
+   "out": "2026-12-11",
+   "name": "Cristina R.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Teléfono"
+  },
+  {
+   "id": "seed62",
+   "room": "Bekoerrota",
+   "in": "2026-12-16",
+   "out": "2026-12-18",
+   "name": "Luca R.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed63",
+   "room": "Bekoerrota",
+   "in": "2026-12-22",
+   "out": "2026-12-24",
+   "name": "Sophie D.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed64",
+   "room": "Bekoerrota",
+   "in": "2026-12-28",
+   "out": "2026-12-31",
+   "name": "Marie & Paul L.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Teléfono"
+  },
+  {
+   "id": "seed65",
+   "room": "Andiño",
+   "in": "2026-11-17",
+   "out": "2026-11-20",
+   "name": "Familia García",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed66",
+   "room": "Andiño",
+   "in": "2026-11-22",
+   "out": "2026-11-25",
+   "name": "Elena S.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed67",
+   "room": "Andiño",
+   "in": "2026-12-01",
+   "out": "2026-12-04",
+   "name": "Anke V.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed68",
+   "room": "Andiño",
+   "in": "2026-12-06",
+   "out": "2026-12-07",
+   "name": "Iñaki A.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed69",
+   "room": "Andiño",
+   "in": "2026-12-09",
+   "out": "2026-12-12",
+   "name": "Iñaki A.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed70",
+   "room": "Andiño",
+   "in": "2026-12-17",
+   "out": "2026-12-18",
+   "name": "Ane U.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed71",
+   "room": "Andiño",
+   "in": "2026-12-21",
+   "out": "2026-12-22",
+   "name": "Anke V.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Teléfono"
+  },
+  {
+   "id": "seed72",
+   "room": "Andiño",
+   "in": "2026-12-26",
+   "out": "2026-12-28",
+   "name": "Jon E.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed73",
+   "room": "Askada",
+   "in": "2026-11-20",
+   "out": "2026-11-23",
+   "name": "Elena S.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed74",
+   "room": "Askada",
+   "in": "2026-11-29",
+   "out": "2026-12-03",
+   "name": "Laura P.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed75",
+   "room": "Askada",
+   "in": "2026-12-09",
+   "out": "2026-12-10",
+   "name": "Jon E.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Teléfono"
+  },
+  {
+   "id": "seed76",
+   "room": "Askada",
+   "in": "2026-12-12",
+   "out": "2026-12-14",
+   "name": "Jon E.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed77",
+   "room": "Askada",
+   "in": "2026-12-19",
+   "out": "2026-12-23",
+   "name": "Jon E.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Teléfono"
+  },
+  {
+   "id": "seed78",
+   "room": "Basigo",
+   "in": "2026-11-22",
+   "out": "2026-11-25",
+   "name": "Sophie D.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed79",
+   "room": "Basigo",
+   "in": "2026-11-30",
+   "out": "2026-12-02",
+   "name": "Marie & Paul L.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed80",
+   "room": "Basigo",
+   "in": "2026-12-09",
+   "out": "2026-12-10",
+   "name": "Tom B.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed81",
+   "room": "Basigo",
+   "in": "2026-12-12",
+   "out": "2026-12-16",
+   "name": "Luca R.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed82",
+   "room": "Basigo",
+   "in": "2026-12-23",
+   "out": "2026-12-25",
+   "name": "Familia García",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed83",
+   "room": "Basigo",
+   "in": "2026-12-27",
+   "out": "2026-12-30",
+   "name": "Cristina R.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed84",
+   "room": "La Benta",
+   "in": "2026-11-23",
+   "out": "2026-11-26",
+   "name": "Sophie D.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed85",
+   "room": "La Benta",
+   "in": "2026-11-30",
+   "out": "2026-12-02",
+   "name": "Tom B.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed86",
+   "room": "La Benta",
+   "in": "2026-12-05",
+   "out": "2026-12-09",
+   "name": "Mikel Z.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Teléfono"
+  },
+  {
+   "id": "seed87",
+   "room": "La Benta",
+   "in": "2026-12-16",
+   "out": "2026-12-20",
+   "name": "Jon E.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed88",
+   "room": "La Benta",
+   "in": "2026-12-25",
+   "out": "2026-12-27",
+   "name": "Sophie D.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed89",
+   "room": "Gaztelugatxe",
+   "in": "2026-11-17",
+   "out": "2026-11-21",
+   "name": "Mikel Z.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed90",
+   "room": "Gaztelugatxe",
+   "in": "2026-11-22",
+   "out": "2026-11-24",
+   "name": "Jon E.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed91",
+   "room": "Gaztelugatxe",
+   "in": "2026-11-28",
+   "out": "2026-11-29",
+   "name": "Marie & Paul L.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed92",
+   "room": "Gaztelugatxe",
+   "in": "2026-12-02",
+   "out": "2026-12-06",
+   "name": "Sophie D.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed93",
+   "room": "Gaztelugatxe",
+   "in": "2026-12-07",
+   "out": "2026-12-09",
+   "name": "Familia García",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed94",
+   "room": "Gaztelugatxe",
+   "in": "2026-12-10",
+   "out": "2026-12-11",
+   "name": "Iñaki A.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed95",
+   "room": "Gaztelugatxe",
+   "in": "2026-12-16",
+   "out": "2026-12-17",
+   "name": "Iñaki A.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed96",
+   "room": "Gaztelugatxe",
+   "in": "2026-12-20",
+   "out": "2026-12-22",
+   "name": "Familia García",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Teléfono"
+  },
+  {
+   "id": "seed97",
+   "room": "Gaztelugatxe",
+   "in": "2026-12-26",
+   "out": "2026-12-30",
+   "name": "Cristina R.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed98",
+   "room": "Akatz",
+   "in": "2026-11-22",
+   "out": "2026-11-25",
+   "name": "Cristina R.",
+   "pax": 1,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed99",
+   "room": "Akatz",
+   "in": "2026-12-02",
+   "out": "2026-12-06",
+   "name": "Laura P.",
+   "pax": 1,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed100",
+   "room": "Akatz",
+   "in": "2026-12-07",
+   "out": "2026-12-11",
+   "name": "Hans M.",
+   "pax": 1,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed101",
+   "room": "Akatz",
+   "in": "2026-12-12",
+   "out": "2026-12-14",
+   "name": "Anke V.",
+   "pax": 1,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed102",
+   "room": "Akatz",
+   "in": "2026-12-16",
+   "out": "2026-12-19",
+   "name": "Elena S.",
+   "pax": 1,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed103",
+   "room": "Akatz",
+   "in": "2026-12-21",
+   "out": "2026-12-24",
+   "name": "Familia García",
+   "pax": 1,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed104",
+   "room": "Akatz",
+   "in": "2026-12-26",
+   "out": "2026-12-30",
+   "name": "Tom B.",
+   "pax": 1,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed105",
+   "room": "San Pelaio",
+   "in": "2026-11-17",
+   "out": "2026-11-21",
+   "name": "Jon E.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  },
+  {
+   "id": "seed106",
+   "room": "San Pelaio",
+   "in": "2026-11-27",
+   "out": "2026-11-29",
+   "name": "Tom B.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Booking"
+  },
+  {
+   "id": "seed107",
+   "room": "San Pelaio",
+   "in": "2026-12-03",
+   "out": "2026-12-07",
+   "name": "Laura P.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed108",
+   "room": "San Pelaio",
+   "in": "2026-12-09",
+   "out": "2026-12-12",
+   "name": "Anke V.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed109",
+   "room": "San Pelaio",
+   "in": "2026-12-18",
+   "out": "2026-12-21",
+   "name": "Hans M.",
+   "pax": 2,
+   "source": "web",
+   "ref": "Directa"
+  },
+  {
+   "id": "seed110",
+   "room": "San Pelaio",
+   "in": "2026-12-26",
+   "out": "2026-12-30",
+   "name": "Tom B.",
+   "pax": 2,
+   "source": "channel",
+   "ref": "Expedia"
+  }
+ ],
+ "external": {},
+ "icalUrls": {}
 }

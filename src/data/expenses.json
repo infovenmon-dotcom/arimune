@@ -14,7 +14,7 @@
     {
       "id": "exp2",
       "date": "2026-06-07",
-      "desc": "Lavandería (sábanas/toallas)",
+      "desc": "Jabón natural para la lavandería",
       "cat": "Limpieza y lavandería",
       "total": 190,
       "ivaPct": 21,
@@ -54,7 +54,7 @@
     {
       "id": "exp6",
       "date": "2026-06-18",
-      "desc": "Fontanería baño Itsaso",
+      "desc": "Fontanería baño Burgoa",
       "cat": "Mantenimiento",
       "total": 120,
       "ivaPct": 21,
@@ -74,7 +74,7 @@
     {
       "id": "exp8",
       "date": "2026-07-09",
-      "desc": "Lavandería (sábanas/toallas)",
+      "desc": "Jabón natural para la lavandería",
       "cat": "Limpieza y lavandería",
       "total": 220,
       "ivaPct": 21,

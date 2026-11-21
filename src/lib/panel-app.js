@@ -1,6 +1,6 @@
 const euro = n => new Intl.NumberFormat('es-ES',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n);
 const euro2 = n => new Intl.NumberFormat('es-ES',{style:'currency',currency:'EUR',minimumFractionDigits:2}).format(n);
-const COLORS = {Argia:'#B49A72',Basoa:'#5F6E52',Itsaso:'#3C5A7A',Lasai:'#8A6E4B',Izar:'#545B86',Haize:'#6FA3A0',Ibai:'#3E7C8C',Aritz:'#7A5C3A',Lorategia:'#2B3A2E',Lur:'#9A7B53'};
+const COLORS = {"Hondartza": "#B49A72", "Koba": "#5F6E52", "Ama Arantza": "#3C5A7A", "Aitxitxe Peli": "#8A6E4B", "Amama Kontxita": "#545B86", "Atxulo": "#6FA3A0", "Burgoa": "#3E7C8C", "Jata": "#7A5C3A", "Bekoerrota": "#2B3A2E", "Andiño": "#9A7B53", "Askada": "#A6543E", "Basigo": "#4F7A63", "La Benta": "#7B6A9E", "Gaztelugatxe": "#3D6B8E", "Akatz": "#8C7A55", "San Pelaio": "#5E5E5E"};
 const rooms = PANEL.rooms;
 function activeRooms(){return rooms.filter(r=>r.active);}
 const today = new Date(PANEL.today + 'T00:00:00');
@@ -232,7 +232,7 @@ function roomCard(r){const info=r;
       <p class="rstory">${info.story}</p>
       <div class="rmeta"><span>${r.cap} pers.</span><span>≈${r.m2} m²</span></div>
       <div class="rprice"><span class="rpl">Precio normal</span><input type="number" min="0" id="price-${r.rid}" value="${r.rate}"><span>€/noche</span><button class="btn sm" onclick="savePrice('${r.rid}')">Guardar</button><span class="rweb">Web (−10%): ${Math.round(r.rate*0.9)}€</span></div>
-      <div class="ramen muted">${bathLabel} · TV · A/C · WiFi${r.kind==='apartamento'?' · cocina':''}${r.kind==='accesible'?' · sin escalones':''}</div>
+      <div class="ramen muted">Baño con ducha · calefacción por el suelo · Wi-Fi</div>
       <div class="rtoggle">
         <span class="rstate ${r.active?'on':'off'}">${r.active?'● En uso · en la web':'● Bloqueada · oculta'}</span>
         <button class="btn ${r.active?'ghost':''} sm" onclick="toggleRoom('${r.id}')">${r.active?'Bloquear':'Activar'}</button>
@@ -242,7 +242,7 @@ function roomCard(r){const info=r;
 function renderRooms(){
   const n=activeRooms().length;
   document.getElementById('roomSummary').innerHTML=`<b style="color:var(--ink)">${n} de ${rooms.length}</b> habitaciones en uso. Las bloqueadas no aparecen en la web ni se pueden reservar hasta que las actives.`;
-  const floors=[['sup','Planta superior · habitaciones con baño privado'],['baja','Planta baja · apartamento y habitación accesible']];
+  const floors=[['baja','Suites y junior suites · solo adultos'],['sup','Habitaciones dobles, superior e individual']];
   document.getElementById('roomGrid').innerHTML=floors.map(([fl,label])=>{
     const list=rooms.filter(r=>r.floor===fl);if(!list.length)return '';
     return `<div class="floor-h">${label}</div>`+list.map(roomCard).join('');
@@ -456,15 +456,15 @@ function draftReply(rv,lc){
   // Borrador DEMO. Con la API de Claude: redacta en español y traduce al idioma del cliente.
   var pos=(rv.rating>=4); var n=(rv.author||'').split(' ')[0];
   var M={
-    es:{p:'Hola '+n+', ¡muchas gracias por tu reseña y por elegir Arimune! Nos alegra muchísimo que disfrutaras de la calma de Urdaibai. Te esperamos de nuevo. Un abrazo, el equipo de Arimune.',
+    es:{p:'Hola '+n+', ¡muchas gracias por tu reseña y por elegir Arimune! Nos alegra muchísimo que disfrutaras de tu estancia en Bakio. Te esperamos de nuevo. Un abrazo, el equipo de Arimune.',
         i:'Hola '+n+', gracias por tu comentario y por alojarte en Arimune. Tomamos nota de lo que indicas para mejorar. Esperamos darte la bienvenida de nuevo. Un saludo, el equipo de Arimune.'},
-    en:{p:'Hi '+n+', thank you so much for your review and for choosing Arimune! We are delighted you enjoyed the peace of Urdaibai. We hope to welcome you back soon. Warm regards, the Arimune team.',
+    en:{p:'Hi '+n+', thank you so much for your review and for choosing Arimune! We are delighted you enjoyed your stay in Bakio. We hope to welcome you back soon. Warm regards, the Arimune team.',
         i:'Hi '+n+', thanks for your feedback and for staying at Arimune. We have noted your comments to keep improving. We hope to welcome you again. Best, the Arimune team.'},
-    fr:{p:'Bonjour '+n+', merci beaucoup pour votre avis et d’avoir choisi Arimune ! Nous sommes ravis que vous ayez apprécié le calme d’Urdaibai. Au plaisir de vous accueillir à nouveau. Cordialement, l’équipe Arimune.',
+    fr:{p:'Bonjour '+n+', merci beaucoup pour votre avis et d’avoir choisi Arimune ! Nous sommes ravis que vous ayez apprécié votre séjour à Bakio. Au plaisir de vous accueillir à nouveau. Cordialement, l’équipe Arimune.',
         i:'Bonjour '+n+', merci pour votre retour et votre séjour chez Arimune. Nous prenons note de vos remarques pour nous améliorer. Au plaisir de vous revoir. Cordialement, l’équipe Arimune.'},
-    de:{p:'Hallo '+n+', vielen Dank für deine Bewertung und dass du dich für Arimune entschieden hast! Es freut uns sehr, dass du die Ruhe von Urdaibai genossen hast. Wir freuen uns auf deinen nächsten Besuch. Herzliche Grüße, das Arimune-Team.',
+    de:{p:'Hallo '+n+', vielen Dank für deine Bewertung und dass du dich für Arimune entschieden hast! Es freut uns sehr, dass du deinen Aufenthalt in Bakio genossen hast. Wir freuen uns auf deinen nächsten Besuch. Herzliche Grüße, das Arimune-Team.',
         i:'Hallo '+n+', danke für dein Feedback und deinen Aufenthalt bei Arimune. Wir nehmen deine Hinweise auf, um uns zu verbessern. Wir würden uns freuen, dich wiederzusehen. Herzliche Grüße, das Arimune-Team.'},
-    it:{p:'Ciao '+n+', grazie mille per la tua recensione e per aver scelto Arimune! Siamo felicissimi che tu abbia apprezzato la tranquillità di Urdaibai. Ti aspettiamo di nuovo. Un saluto, il team di Arimune.',
+    it:{p:'Ciao '+n+', grazie mille per la tua recensione e per aver scelto Arimune! Siamo felicissimi che tu abbia apprezzato il tuo soggiorno a Bakio. Ti aspettiamo di nuovo. Un saluto, il team di Arimune.',
         i:'Ciao '+n+', grazie per il tuo commento e per aver soggiornato a Arimune. Prendiamo nota delle tue osservazioni per migliorare. Speriamo di rivederti presto. Un saluto, il team di Arimune.'}
   };
   var L=M[(lc||'es').slice(0,2)]||M.es; return pos?L.p:L.i;

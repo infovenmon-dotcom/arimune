@@ -2,7 +2,7 @@
   "_meta": "DATOS DE EJEMPLO para el panel (portados de arimune-panel-control.html). Se sustituyen por datos reales con el motor de reservas (Fase 4) y la contabilidad real (Fase 6). No usar en producción.",
   "bookings": [
     {
-      "room": "Argia",
+      "room": "Koba",
       "name": "Marie & Paul L.",
       "in": "2026-06-20",
       "out": "2026-06-25",
@@ -12,7 +12,7 @@
       "rate": 95
     },
     {
-      "room": "Basoa",
+      "room": "Askada",
       "name": "Anke V.",
       "in": "2026-06-22",
       "out": "2026-06-26",
@@ -22,7 +22,7 @@
       "rate": 95
     },
     {
-      "room": "Itsaso",
+      "room": "Hondartza",
       "name": "Familia Etxeberria",
       "in": "2026-06-23",
       "out": "2026-06-28",
@@ -32,8 +32,8 @@
       "rate": 105
     },
     {
-      "room": "Lorategia",
-      "name": "Jensen (4 pax)",
+      "room": "Ama Arantza",
+      "name": "Jensen (2 pax)",
       "in": "2026-06-24",
       "out": "2026-06-30",
       "guests": 4,
@@ -42,7 +42,7 @@
       "rate": 160
     },
     {
-      "room": "Lasai",
+      "room": "Burgoa",
       "name": "Cristina R.",
       "in": "2026-06-27",
       "out": "2026-06-29",
@@ -52,7 +52,7 @@
       "rate": 90
     },
     {
-      "room": "Argia",
+      "room": "Koba",
       "name": "Hans & Greta",
       "in": "2026-06-28",
       "out": "2026-07-02",
@@ -62,7 +62,7 @@
       "rate": 95
     },
     {
-      "room": "Itsaso",
+      "room": "Hondartza",
       "name": "Familia Agirre",
       "in": "2026-07-03",
       "out": "2026-07-07",
@@ -72,7 +72,7 @@
       "rate": 105
     },
     {
-      "room": "Argia",
+      "room": "Koba",
       "name": "Laura & Tom",
       "in": "2026-07-08",
       "out": "2026-07-11",
@@ -82,7 +82,7 @@
       "rate": 95
     },
     {
-      "room": "Basoa",
+      "room": "Askada",
       "name": "S. Müller",
       "in": "2026-07-10",
       "out": "2026-07-14",
@@ -92,7 +92,7 @@
       "rate": 95
     },
     {
-      "room": "Izar",
+      "room": "Gaztelugatxe",
       "name": "J. Dubois",
       "in": "2026-07-12",
       "out": "2026-07-15",
@@ -102,7 +102,7 @@
       "rate": 95
     },
     {
-      "room": "Itsaso",
+      "room": "Hondartza",
       "name": "H. Becker",
       "in": "2026-07-18",
       "out": "2026-07-22",
@@ -112,7 +112,7 @@
       "rate": 105
     },
     {
-      "room": "Lorategia",
+      "room": "Ama Arantza",
       "name": "The Walkers (4 pax)",
       "in": "2026-07-18",
       "out": "2026-07-24",
@@ -122,7 +122,7 @@
       "rate": 160
     },
     {
-      "room": "Lasai",
+      "room": "Burgoa",
       "name": "Marta S.",
       "in": "2026-07-20",
       "out": "2026-07-23",
@@ -132,7 +132,7 @@
       "rate": 90
     },
     {
-      "room": "Argia",
+      "room": "Koba",
       "name": "Nora & Beñat",
       "in": "2026-07-20",
       "out": "2026-07-24",
@@ -142,7 +142,7 @@
       "rate": 95
     },
     {
-      "room": "Argia",
+      "room": "Koba",
       "name": "F. Rossi",
       "in": "2026-08-01",
       "out": "2026-08-06",
@@ -152,7 +152,7 @@
       "rate": 95
     },
     {
-      "room": "Lasai",
+      "room": "Burgoa",
       "name": "R. O'Brien",
       "in": "2026-08-05",
       "out": "2026-08-09",
@@ -162,7 +162,7 @@
       "rate": 90
     },
     {
-      "room": "Basoa",
+      "room": "Askada",
       "name": "L. Janssen",
       "in": "2026-08-08",
       "out": "2026-08-12",
@@ -172,7 +172,7 @@
       "rate": 95
     },
     {
-      "room": "Itsaso",
+      "room": "Hondartza",
       "name": "Familia Etxeberria",
       "in": "2026-08-10",
       "out": "2026-08-15",
@@ -182,7 +182,7 @@
       "rate": 105
     },
     {
-      "room": "Izar",
+      "room": "Gaztelugatxe",
       "name": "P. Schmidt",
       "in": "2026-08-12",
       "out": "2026-08-16",
@@ -192,7 +192,7 @@
       "rate": 95
     },
     {
-      "room": "Lorategia",
+      "room": "Ama Arantza",
       "name": "The Browns (4 pax)",
       "in": "2026-08-15",
       "out": "2026-08-22",
@@ -202,7 +202,7 @@
       "rate": 160
     },
     {
-      "room": "Basoa",
+      "room": "Askada",
       "name": "Iker & Maite",
       "in": "2026-08-20",
       "out": "2026-08-24",
@@ -212,7 +212,7 @@
       "rate": 95
     },
     {
-      "room": "Lasai",
+      "room": "Burgoa",
       "name": "K. Andersen",
       "in": "2026-08-23",
       "out": "2026-08-27",
@@ -222,7 +222,7 @@
       "rate": 90
     },
     {
-      "room": "Basoa",
+      "room": "Askada",
       "name": "Claire D.",
       "in": "2026-09-01",
       "out": "2026-09-04",
@@ -232,7 +232,7 @@
       "rate": 95
     },
     {
-      "room": "Argia",
+      "room": "Koba",
       "name": "Sophie & Marc",
       "in": "2026-09-05",
       "out": "2026-09-09",
@@ -242,7 +242,7 @@
       "rate": 95
     },
     {
-      "room": "Itsaso",
+      "room": "Hondartza",
       "name": "De Vries",
       "in": "2026-09-10",
       "out": "2026-09-14",
@@ -252,7 +252,7 @@
       "rate": 105
     },
     {
-      "room": "Izar",
+      "room": "Gaztelugatxe",
       "name": "Unai & Leire",
       "in": "2026-09-12",
       "out": "2026-09-15",
@@ -262,7 +262,7 @@
       "rate": 95
     },
     {
-      "room": "Lorategia",
+      "room": "Ama Arantza",
       "name": "Familia Ruiz (4 pax)",
       "in": "2026-09-18",
       "out": "2026-09-22",
@@ -281,7 +281,7 @@
       "iva": 43.18,
       "status": "Pendiente",
       "ch": "Directa",
-      "concept": "Estancia 5 noches · hab. Argia"
+      "concept": "Estancia 5 noches · hab. Koba"
     },
     {
       "n": "2026/042",
@@ -291,7 +291,7 @@
       "iva": 34.55,
       "status": "Cobrada",
       "ch": "Booking",
-      "concept": "Estancia 4 noches · hab. Basoa"
+      "concept": "Estancia 4 noches · hab. Askada"
     },
     {
       "n": "2026/043",
@@ -301,17 +301,17 @@
       "iva": 47.73,
       "status": "Cobrada",
       "ch": "Directa",
-      "concept": "Estancia 5 noches · hab. Itsaso · media pensión"
+      "concept": "Estancia 5 noches · hab. Hondartza"
     },
     {
       "n": "2026/044",
       "date": "2026-06-24",
-      "client": "Jensen (4 pax)",
+      "client": "Jensen (2 pax)",
       "base": 872.73,
       "iva": 87.27,
       "status": "Pendiente",
       "ch": "Expedia/Vrbo",
-      "concept": "Estancia 6 noches · hab. Lorategia"
+      "concept": "Estancia 6 noches · hab. Ama Arantza"
     },
     {
       "n": "2026/045",
@@ -321,7 +321,7 @@
       "iva": 16.36,
       "status": "Cobrada",
       "ch": "Teléfono/WhatsApp",
-      "concept": "Estancia 2 noches · hab. Lasai"
+      "concept": "Estancia 2 noches · hab. Burgoa"
     },
     {
       "n": "2026/046",
@@ -331,7 +331,7 @@
       "iva": 34.55,
       "status": "Cobrada",
       "ch": "Directa",
-      "concept": "Estancia 4 noches · hab. Argia · media pensión"
+      "concept": "Estancia 4 noches · hab. Koba"
     },
     {
       "n": "2026/047",
@@ -341,7 +341,7 @@
       "iva": 38.18,
       "status": "Pendiente",
       "ch": "Directa",
-      "concept": "Estancia 4 noches · hab. Itsaso"
+      "concept": "Estancia 4 noches · hab. Hondartza"
     },
     {
       "n": "2026/048",
@@ -351,7 +351,7 @@
       "iva": 25.91,
       "status": "Cobrada",
       "ch": "Directa",
-      "concept": "Estancia 3 noches · hab. Argia"
+      "concept": "Estancia 3 noches · hab. Koba"
     },
     {
       "n": "2026/049",
@@ -361,7 +361,7 @@
       "iva": 34.55,
       "status": "Cobrada",
       "ch": "Booking",
-      "concept": "Estancia 4 noches · hab. Basoa"
+      "concept": "Estancia 4 noches · hab. Askada"
     },
     {
       "n": "2026/050",
@@ -371,7 +371,7 @@
       "iva": 25.91,
       "status": "Pendiente",
       "ch": "Booking",
-      "concept": "Estancia 3 noches · hab. Izar"
+      "concept": "Estancia 3 noches · hab. Gaztelugatxe"
     },
     {
       "n": "2026/051",
@@ -381,7 +381,7 @@
       "iva": 38.18,
       "status": "Cobrada",
       "ch": "Booking",
-      "concept": "Estancia 4 noches · hab. Itsaso"
+      "concept": "Estancia 4 noches · hab. Hondartza"
     },
     {
       "n": "2026/052",
@@ -391,7 +391,7 @@
       "iva": 87.27,
       "status": "Cobrada",
       "ch": "Expedia/Vrbo",
-      "concept": "Estancia 6 noches · hab. Lorategia"
+      "concept": "Estancia 6 noches · hab. Ama Arantza"
     },
     {
       "n": "2026/053",
@@ -401,7 +401,7 @@
       "iva": 24.55,
       "status": "Pendiente",
       "ch": "Teléfono/WhatsApp",
-      "concept": "Estancia 3 noches · hab. Lasai"
+      "concept": "Estancia 3 noches · hab. Burgoa"
     },
     {
       "n": "2026/054",
@@ -411,7 +411,7 @@
       "iva": 34.55,
       "status": "Cobrada",
       "ch": "Directa",
-      "concept": "Estancia 4 noches · hab. Argia · media pensión"
+      "concept": "Estancia 4 noches · hab. Koba"
     },
     {
       "n": "2026/055",
@@ -421,7 +421,7 @@
       "iva": 43.18,
       "status": "Cobrada",
       "ch": "Booking",
-      "concept": "Estancia 5 noches · hab. Argia"
+      "concept": "Estancia 5 noches · hab. Koba"
     },
     {
       "n": "2026/056",
@@ -431,7 +431,7 @@
       "iva": 32.73,
       "status": "Pendiente",
       "ch": "Booking",
-      "concept": "Estancia 4 noches · hab. Lasai"
+      "concept": "Estancia 4 noches · hab. Burgoa"
     },
     {
       "n": "2026/057",
@@ -441,7 +441,7 @@
       "iva": 34.55,
       "status": "Cobrada",
       "ch": "Booking",
-      "concept": "Estancia 4 noches · hab. Basoa"
+      "concept": "Estancia 4 noches · hab. Askada"
     },
     {
       "n": "2026/058",
@@ -451,7 +451,7 @@
       "iva": 47.73,
       "status": "Cobrada",
       "ch": "Directa",
-      "concept": "Estancia 5 noches · hab. Itsaso · media pensión"
+      "concept": "Estancia 5 noches · hab. Hondartza"
     },
     {
       "n": "2026/059",
@@ -461,7 +461,7 @@
       "iva": 34.55,
       "status": "Pendiente",
       "ch": "Expedia/Vrbo",
-      "concept": "Estancia 4 noches · hab. Izar"
+      "concept": "Estancia 4 noches · hab. Gaztelugatxe"
     },
     {
       "n": "2026/060",
@@ -471,7 +471,7 @@
       "iva": 101.82,
       "status": "Cobrada",
       "ch": "Booking",
-      "concept": "Estancia 7 noches · hab. Lorategia"
+      "concept": "Estancia 7 noches · hab. Ama Arantza"
     }
   ],
   "expenses": [

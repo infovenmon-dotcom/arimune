@@ -19,7 +19,7 @@
     <div class="top">
       <div><h1 id="vtitle">Reservas</h1><p id="vsub">Calendario de ocupación por habitación</p></div>
       <div style="display:flex;gap:10px;align-items:center">
-        <span class="demo">Demo · facturas y gastos de ejemplo</span>
+        <span class="demo">Demo · reservas, tarifas e importes de ejemplo</span>
         <button class="btn ghost" id="importBtn">Importar CSV</button> <button class="btn" id="newBtn">+ Nueva reserva</button><input type="file" id="importFile" accept=".csv,text/csv" style="display:none">
       </div>
     </div>
@@ -27,7 +27,7 @@
     <!-- ===== RESERVAS ===== -->
     <section class="view on" id="v-reservas">
       <div class="kpis">
-        <div class="kpi"><div class="l">Ocupación (mes)</div><div class="v" id="k-occ">—</div><div class="d up">Junio 2026</div></div>
+        <div class="kpi"><div class="l">Ocupación (mes)</div><div class="v" id="k-occ">—</div><div class="d up">este mes</div></div>
         <div class="kpi"><div class="l">Reservas activas</div><div class="v" id="k-res">—</div><div class="d">próximas + en curso</div></div>
         <div class="kpi"><div class="l">Entradas hoy</div><div class="v" id="k-in">—</div><div class="d">check-in 14:00</div></div>
         <div class="kpi"><div class="l">Salidas hoy</div><div class="v" id="k-out">—</div><div class="d">check-out 12:00</div></div>
@@ -134,7 +134,7 @@
 
     <!-- ===== HABITACIONES ===== -->
     <section class="view" id="v-habitaciones">
-      <div class="card"><div class="hd"><h3>Habitaciones</h3><span class="muted" style="font-size:12px">8 en total · activa o bloquea cada una</span></div>
+      <div class="card"><div class="hd"><h3>Habitaciones</h3><span class="muted" style="font-size:12px">16 en total · activa o bloquea cada una · tarifas de ejemplo: poned las vuestras</span></div>
         <div class="bd"><p id="roomSummary" class="muted"></p><div class="rgrid" id="roomGrid"></div></div></div>
       <p class="muted" style="font-size:12.5px">Bloquear una habitación la quita del calendario y de la web al instante; al activarla, vuelve a aparecer. Útil mientras no estén listas todas. En producción el estado se guarda y se sincroniza con el motor de reservas y los canales (channel manager). <span style="color:var(--mist)">(Demo: el bloqueo se mantiene durante la sesión.)</span></p>
     </section>
